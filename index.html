@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang = "es-MX">
+	<head>
+		<meta charset = "UTF-8"/>
+		<title>Calculadora muy simple</title>
+		<link rel = stylesheet href = estilo.css />
+		<!-- JS movido debido a elementos (aún no disponibles al cargar)-->
+	</head>
+	<body>
+		<div class = "columna centradosH separarM fullH">
+			<div class = "sbttl txtCen">Calculadora simple</div>
+			<!--p>Calculadora</p-->
+			<div class = "fila centradosH separar">
+				<!-- Tipo Number no respeta size, maxlength ni pattern -->
+				<input type = number class = calcN onkeypress = "limite(this)"
+					placeholder = "#0..." min = -99999 max = 99999 />
+				<select id = operando class = msel size = "1">
+					<option>+</option>
+					<option>᠆</option>
+					<option>×</option>
+					<option>÷</option>
+					<option>^</option>
+					<option>√</option>
+				</select>
+				<input type = number class = calcN onkeypress = "limite(this)"
+					placeholder = "#0..." min = -99999 max = 99999  />
+				<button class = mbtn onclick = "operar()">=</button>
+				<input id = res disabled = true placeholder = resultado />
+			</div>
+			<div class = "advert pulsar pop"></div>
+		</div>
+		<!-- v Para que cargue cuando ya estén los elementos -->
+		<script src = javascript.js></script>
+	</body>
+</html>
