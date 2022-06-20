@@ -1,0 +1,2 @@
+# jsCalcu
+A simple calculator
